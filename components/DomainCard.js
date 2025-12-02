@@ -46,7 +46,7 @@ export default function DomainCard({
                 </div>
                 <TextField
                     mainClassName="w-full"
-                    placeholder={placeholderText ? placeholderText : "https://linklee.xyz/longurl"}
+                    placeholder={placeholderText ? placeholderText : "https://linklee-web.vercel.app/longurl"}
                     label="Destination"
                     onTextChange={(text) => setUrl(text)}
                 />

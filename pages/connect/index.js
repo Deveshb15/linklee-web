@@ -85,7 +85,7 @@ export default function Connect() {
         uid: userData?.id,
         username: usernameInput,
         updatedLinkCount: 0,
-        url: "https://linklee.xyz/",
+        url: "https://linklee-web.vercel.app/",
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       },
@@ -119,7 +119,7 @@ export default function Connect() {
 
                   <Column className="mx-5 my-4">
                     <TextField
-                      prefix="linklee.xyz/"
+                      prefix="linklee-web.vercel.app/"
                       placeholder="yourname"
                       onTextChange={(text) => {
                         debouncedCheckUsernameExists(text)

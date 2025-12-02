@@ -27,11 +27,11 @@ export async function middleware(request) {
         if (pathname !== '/' && pathname.startsWith('/')) {
             let newPath = pathname.slice(1)
             // const usernameRes = await nativeFetch("http://localhost:3000/api/links/get-username", {
-            const usernameRes = await nativeFetch("https://linklee.xyz/api/links/get-username", {
+            const usernameRes = await nativeFetch("https://linklee-web.vercel.app/api/links/get-username", {
                 username: newPath
             })
             let usernameData = usernameRes?.data
-            if (usernameData?.link?.url?.length > 0 && usernameData?.link?.url !== null && usernameData?.link?.url !== undefined && usernameData?.link?.url !== "" && !usernameData?.link?.url?.includes("linklee.xyz/")) {
+            if (usernameData?.link?.url?.length > 0 && usernameData?.link?.url !== null && usernameData?.link?.url !== undefined && usernameData?.link?.url !== "" && !usernameData?.link?.url?.includes("linklee-web.vercel.app/")) {
                 return NextResponse.redirect(new URL(appendHttpsIfNotPresent(usernameData?.link?.url)))
             } else {
                 return NextResponse.next()

@@ -7,8 +7,8 @@ export default function Page({ title }) {
       <Head>
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="linklee.xyz" />
-        <meta name="twitter:title" content="linklee.xyz" />
+        <meta property="og:title" content="linklee-web.vercel.app" />
+        <meta name="twitter:title" content="linklee-web.vercel.app" />
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta
@@ -21,9 +21,9 @@ export default function Page({ title }) {
           content={`a link you can redirect anywhere`}
         />
 
-        <meta name="twitter:image" content={`https://linklee.xyz/og-image.png`} />
+        <meta name="twitter:image" content={`https://linklee-web.vercel.app/og-image.png`} />
 
-        <meta property="og:image" content={`https://linklee.xyz/og-image.png`} />
+        <meta property="og:image" content={`https://linklee-web.vercel.app/og-image.png`} />
 
         <link rel="icon" href="/favicon.ico" />
 

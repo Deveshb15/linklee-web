@@ -61,13 +61,13 @@ export default function Connect() {
                 id: linkData?.uid,
                 data: {
                     updatedLinkCount: (+linkData?.updatedLinkCount) + 1,
-                    url: "https://linklee.xyz",
+                    url: "https://linklee-web.vercel.app",
                     updatedAt: new Date().toISOString()
                 }
             })
             console.log("RES ", res)
             setUpdatedData({
-                url: "https://linklee.xyz",
+                url: "https://linklee-web.vercel.app",
                 updatedLinkCount: (+linkData?.updatedLinkCount) + 1,
                 username: linkData?.username,
                 uid: linkData?.uid,
@@ -83,7 +83,7 @@ export default function Connect() {
     }
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`https://linklee.xyz/${linkData?.username}`)
+        navigator.clipboard.writeText(`https://linklee-web.vercel.app/${linkData?.username}`)
         alert("Copied to clipboard")
     }
 
@@ -105,7 +105,7 @@ export default function Connect() {
                                         <DomainCard
                                             title="Connect your link to any domain"
                                             titleSecondary="Send it to your git, twitter, profile or wherever you want"
-                                            disabledInputText={`https://linklee.xyz/${updatedData?.username ? updatedData?.username : linkData?.username}`}
+                                            disabledInputText={`https://linklee-web.vercel.app/${updatedData?.username ? updatedData?.username : linkData?.username}`}
                                             buttonText="Connect"
                                             buttonAction={handleUsername}
                                             setUrl={setNewLink}
@@ -119,7 +119,7 @@ export default function Connect() {
                                             <DomainCard
                                                 title="Connect your link to any domain"
                                                 titleSecondary="Send it to your git, twitter, profile or wherever you want"
-                                                disabledInputText={`https://linklee.xyz/${updatedData?.username ? updatedData?.username : linkData?.username}`}
+                                                disabledInputText={`https://linklee-web.vercel.app/${updatedData?.username ? updatedData?.username : linkData?.username}`}
                                                 buttonText="Connect"
                                                 buttonAction={handleUsername}
                                                 placeholderText={updatedData?.url ? updatedData?.url : linkData?.url}
@@ -130,7 +130,7 @@ export default function Connect() {
                                         ) : (
                                             <ChangeDomainCard
                                                 title="Your link is connected"
-                                                disabledInputText={`https://linklee.xyz/${updatedData ? updatedData?.username : linkData?.username}`}
+                                                disabledInputText={`https://linklee-web.vercel.app/${updatedData ? updatedData?.username : linkData?.username}`}
                                                 inputLabel="Destination"
                                                 buttonText="Change Destination"
                                                 buttonAction={handleUsername}
